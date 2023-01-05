@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:paywell/main.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key, required this.title});
-
-  final String title;
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -75,10 +73,12 @@ class _LoginPageState extends State<LoginPage> {
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(18.0),
                           side: BorderSide(color: Colors.red)))),
-              onPressed: () => {Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const Home()),
-  )},
+              onPressed: () => {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Home()),
+                    )
+                  },
               child: Text("Continue".toUpperCase(),
                   style: const TextStyle(fontSize: 14))),
         )
